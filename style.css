@@ -1,0 +1,149 @@
+/* --- Aesthetic Overhaul --- */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right, #6d7b8d, #5b6b7d); /* Subtle gradient background */
+    margin: 30px;
+    color: #fff; /* White text for dark background */
+}
+
+h1 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-weight: 600;
+    font-size: 3.5em; /* Much larger H1 */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.controls {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px; /* Increased gap */
+}
+
+#score-display {
+    height: 30px; /* Increased height */
+    margin-bottom: 20px;
+    font-size: 1.5em; /* Larger font */
+    font-weight: 600;
+    color: #f1c40f; /* Gold color for score */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    padding: 15px 30px; /* Increased padding */
+    font-size: 1.2em; /* Larger font */
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px; /* Larger border-radius */
+    background-color: #5dade2; /* New button color */
+    color: white;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+button:hover {
+    background-color: #4ba9d9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.main-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 160px); /* Significantly increased grid item size */
+    grid-template-rows: repeat(4, 160px); /* Significantly increased grid item size */
+    gap: 15px; /* Increased gap */
+    border: none; /* Remove border for a flatter look */
+    padding: 15px; /* Increased padding */
+    background-color: rgba(0, 0, 0, 0.1); /* Dark, translucent background */
+    border-radius: 15px; /* Increased border-radius */
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.grid-item {
+    width: 160px; /* Significantly increased grid item size */
+    height: 160px; /* Significantly increased grid item size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em; /* Larger font size */
+    font-weight: 600;
+    color: white;
+    cursor: grab;
+    user-select: none;
+    border-radius: 12px; /* Larger border-radius */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: 5px solid transparent;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* New Color Palette */
+.grid-item.orange { background-color: #e67e22; } /* R1 */
+.grid-item.purple { background-color: #8e44ad; } /* R2 */
+.grid-item.red { background-color: #c0392b; }    /* Fake */
+.grid-item.blank { background-color: #95a5a6; }  /* Blank */
+
+.grid-item.dragging {
+    opacity: 0.8;
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* New Path Highlighting */
+.optimal-path {
+    border-color: #f1c40f !important; /* Gold border */
+    box-shadow: 0 0 20px #f1c40f, inset 0 0 10px rgba(241, 196, 15, 0.5);
+    transform: scale(1.03);
+}
+
+.optimal-r2-path {
+    border-color: #5dade2 !important; /* Light blue border */
+    box-shadow: 0 0 20px #5dade2, inset 0 0 10px rgba(93, 173, 226, 0.5);
+    transform: scale(1.03);
+}
+
+#costs-container {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    color: #ecf0f1;
+}
+
+#costs-container h3 {
+    margin-top: 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+#costs-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#costs-container li {
+    margin-bottom: 12px;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+#costs-container span {
+    font-weight: 600;
+    color: #f1c40f;
+}

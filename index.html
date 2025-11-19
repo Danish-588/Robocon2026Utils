@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draggable Grid</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Meihua Forest</h1>
+    <div class="controls">
+        <button id="randomize-btn">Randomize</button>
+        <button id="find-path-btn">Find Path</button>
+    </div>
+    <div id="score-display"></div>
+    <div class="main-content">
+        <div class="grid-container" id="grid-container">
+        </div>
+        <div id="costs-container">
+            <h3>Tunable Costs</h3>
+            <ul>
+                <li>R2 Reward (Front): <span id="cost-r2-front"></span></li>
+                <li>R2 Reward (Side): <span id="cost-r2-side"></span></li>
+                <li>R1 Penalty (Row 0): <span id="cost-r1-0"></span></li>
+                <li>R1 Penalty (Row 1): <span id="cost-r1-1"></span></li>
+                <li>R1 Penalty (Row 2): <span id="cost-r1-2"></span></li>
+                <li>R1 Penalty (Row 3): <span id="cost-r1-3"></span></li>
+                <li>R2 Overload Penalty: <span id="cost-r2-overload"></span></li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
